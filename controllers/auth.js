@@ -2,7 +2,7 @@ const User = require("../models/User")
 const bcrypt = require("bcrypt");
 const createError = require("../utilities/error");
 const jwt = require("jsonwebtoken")
-const {validationResult } = require('express-validator');
+const {validationResult} = require('express-validator');
 const otpGenerator = require('otp-generator');
 const transporter = require("../utilities/email")
 
@@ -295,7 +295,7 @@ exports.restLink = async (req, res, next) => {
     console.log(id, "id")     
     try{
       res
-      .redirect(`localhost:3000/restLink/${id}/${token}`)
+      .redirect(`https://eflextesting.netlify.app/restLink/${id}/${token}`)
     }catch(err){next(err)}
   }
 
